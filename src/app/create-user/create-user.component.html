@@ -1,6 +1,19 @@
 <div>
-  <label>id: <input readonly [(ngModel)]="user.id" placeholder="generated id" /></label>
-  <label>name:<input [(ngModel)]="user.voornaam" placeholder="name" /></label>
-
+  <label>id bij aan te passen user: <input [(ngModel)]="user.id" placeholder="id" /></label>
+<br>
+  <label>username:<input [(ngModel)]="user.username" placeholder="username" /></label>
+  <br>
+  <label>wachtwoord:<input [(ngModel)]="user.wachtwoord" placeholder="wachtwoord" /></label>
+  <br>
+  <label>biografie:<input [(ngModel)]="user.bio" placeholder="bio" /></label>
+  <br>
+  <label>voornaam:<input [(ngModel)]="user.voornaam" placeholder="voornaam" /></label>
+  <br>
+  <label>achternaam:<input [(ngModel)]="user.achternaam" placeholder="achternaam" /></label>
+  <br>
+  <label>email:<input [(ngModel)]="user.email" placeholder="emailadress" /></label>
+<br>
   <input type="button" (click)="create()" value="Create user">
+  <br>
+  <input type="button" (click)="adjust()" value="Adjust user">
 </div>
