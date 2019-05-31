@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
   private url: string = "http://localhost:8082/api";
-  private endpoint: string = "trainee";
+  private endpoint: string = "gebruiker";
 
   constructor(private httpClient: HttpClient) { }
 
@@ -18,6 +18,12 @@ export class UserService {
   }
   create(user: User): Observable<User> {
     let resultFromService: Observable<User> = this.httpClient.post<User>(`${this.url}/${this.endpoint}`, user);
+
+    return resultFromService;
+  }
+
+  adjust(user: User): Observable<User> {
+    let resultFromService: Observable<User> = this.httpClient.put<User>(`${this.url}/${this.endpoint}/${user.id}`, user);
 
     return resultFromService;
   }
