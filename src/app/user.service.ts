@@ -1,0 +1,24 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { User } from './user';
+import { Observable } from 'rxjs';
+
+
+@Injectable({
+  providedIn: 'root'
+})
+export class UserService {
+  private url: string = "http://localhost:8082/api";
+  private endpoint: string = "trainee";
+
+  constructor(private httpClient: HttpClient) { }
+
+  list(): Observable<User[]> {
+    return this.httpClient.get<User[]>(`${this.url}/${this.endpoint}`); // returns an Observable of type User
+  }
+  create(user: User): Observable<User> {
+    let resultFromService: Observable<User> = this.httpClient.post<User>(`${this.url}/${this.endpoint}`, user);
+
+    return resultFromService;
+  }
+}
