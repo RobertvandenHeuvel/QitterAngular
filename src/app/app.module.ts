@@ -8,12 +8,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { CreateUserComponent } from './create-user/create-user.component';
 
 import { FormsModule } from '@angular/forms';
+import { CreateUserPageComponent } from './create-user-page/create-user-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    CreateUserPageComponent
   ],
   imports: [
     BrowserModule,
