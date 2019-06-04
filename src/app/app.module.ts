@@ -10,6 +10,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { FormsModule } from '@angular/forms';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AdjustUserComponent } from './adjust-user/adjust-user.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     UsersComponent,
     CreateUserComponent,
     LoginPageComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AdjustUserComponent
   ],
   imports: [
     BrowserModule,

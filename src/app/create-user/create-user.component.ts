@@ -22,11 +22,4 @@ export class CreateUserComponent implements OnInit {
     });
   }
 
-  adjust(): void {
-    this.userService.adjust(this.user).subscribe(user => {
-      this.user = new User();
-    });
-
-  }
-
 }

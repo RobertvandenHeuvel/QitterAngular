@@ -1,6 +1,8 @@
-<h1>Create User pagina</h1>
+<h1>Adjust User pagina {{user.username}}</h1>
 
 <div>
+  <label>id:<input readonly [(ngModel)]="user.id" placeholder="id" /></label>
+  <br>
   <label>username:<input [(ngModel)]="user.username" placeholder="username" /></label>
   <br>
   <label>wachtwoord:<input [(ngModel)]="user.wachtwoord" placeholder="wachtwoord" /></label>
@@ -14,8 +16,6 @@
   <label>email:<input [(ngModel)]="user.email" placeholder="emailadress" /></label>
   <br>
   <label>rol:<input [(ngModel)]="user.rol" placeholder="rol" /></label>
-  <br>
-  <input type="button" (click)="create()" value="Create user">
   <br>
   <input type="button" (click)="adjust()" value="Adjust user">
 </div>
