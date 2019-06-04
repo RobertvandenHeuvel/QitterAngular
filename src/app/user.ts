@@ -6,5 +6,6 @@ export class User {
     voornaam: String;
     achternaam: String;
     email: String;
+    rol: any;
     
 }

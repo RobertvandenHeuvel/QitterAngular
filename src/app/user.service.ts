@@ -16,6 +16,10 @@ export class UserService {
   list(): Observable<User[]> {
     return this.httpClient.get<User[]>(`${this.url}/${this.endpoint}`); // returns an Observable of type User
   }
+  findById(id: Number): Observable<User>{
+    return this.httpClient.get<User>(`${this.url}/${this.endpoint}/${id}`);
+  }
+
   create(user: User): Observable<User> {
     let resultFromService: Observable<User> = this.httpClient.post<User>(`${this.url}/${this.endpoint}`, user);
 

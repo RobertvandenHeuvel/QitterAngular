@@ -3,12 +3,17 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { AdjustUserComponent } from './adjust-user/adjust-user.component';
+import { UsersComponent } from './users/users.component';
 
 
 
 const routes: Routes = [
   {path: 'create-user', component: CreateUserComponent},
+  {path: 'users', component: UsersComponent},
   {path: 'login-page', component: LoginPageComponent},
+  {path: 'adjust-user', component: AdjustUserComponent},
+  {path: 'adjust-user/:id', component: AdjustUserComponent},
   {path: '', redirectTo: 'login-page', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent}
 ];
