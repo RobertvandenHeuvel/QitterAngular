@@ -17,4 +17,11 @@ export class UsersComponent implements OnInit {
     });
   }
 
+  delete(id: Number): void{
+    this.userService.delete(id).subscribe(
+      ()=> 
+    console.log("Aaaaand it's gone")
+    )
+  }
+
 }
