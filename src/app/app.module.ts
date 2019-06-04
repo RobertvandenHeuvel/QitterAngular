@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AdjustUserComponent } from './adjust-user/adjust-user.component';
+import { ShowUserComponent } from './show-user/show-user.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { AdjustUserComponent } from './adjust-user/adjust-user.component';
     CreateUserComponent,
     LoginPageComponent,
     PageNotFoundComponent,
-    AdjustUserComponent
+    AdjustUserComponent,
+    ShowUserComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
