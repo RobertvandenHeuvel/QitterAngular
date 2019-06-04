@@ -31,4 +31,9 @@ export class UserService {
 
     return resultFromService;
   }
+
+  delete(id: Number): Observable<User>{
+    return this.httpClient.delete<User>(`${this.url}/${this.endpoint}/${id}`);
+  }
+
 }
