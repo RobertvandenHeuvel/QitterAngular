@@ -8,7 +8,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { CreateUserComponent } from './create-user/create-user.component';
 
 import { FormsModule } from '@angular/forms';
-import { CreateUserPageComponent } from './create-user-page/create-user-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
@@ -17,7 +16,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AppComponent,
     UsersComponent,
     CreateUserComponent,
-    CreateUserPageComponent,
     LoginPageComponent,
     PageNotFoundComponent
   ],
