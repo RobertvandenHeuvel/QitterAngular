@@ -14,6 +14,7 @@ import { AdjustUserComponent } from './adjust-user/adjust-user.component';
 import { ShowUserComponent } from './show-user/show-user.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NewsfeedComponent } from './newsfeed/newsfeed.component';
+import { CreatePostComponent } from './create-post/create-post.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NewsfeedComponent } from './newsfeed/newsfeed.component';
     AdjustUserComponent,
     ShowUserComponent,
     NavbarComponent,
-    NewsfeedComponent
+    NewsfeedComponent,
+    CreatePostComponent
   ],
   imports: [
     BrowserModule,
