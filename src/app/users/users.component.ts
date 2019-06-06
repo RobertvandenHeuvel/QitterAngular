@@ -17,17 +17,6 @@ export class UsersComponent implements OnInit {
     });
   }
 
-  // dochange(){
-  //   //alert("you clicked me" );
-  //   var choice=confirm("Confirm pop up box");
-  //   var message;
-  //   if(choice==true)
-  //     message="you presed ok"
-  //   else
-  //     message="are you sure u want to cancel?";
-  //   alert(message);
-  // }
-
   delete(id: Number): void{
     var choice = confirm("Wilt u deze gebruiker verwijderen?");
     if(choice==true){
