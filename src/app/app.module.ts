@@ -13,6 +13,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AdjustUserComponent } from './adjust-user/adjust-user.component';
 import { ShowUserComponent } from './show-user/show-user.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { NewsfeedComponent } from './newsfeed/newsfeed.component';
+import { CreatePostComponent } from './create-post/create-post.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     PageNotFoundComponent,
     AdjustUserComponent,
     ShowUserComponent,
-    NavbarComponent
+    NavbarComponent,
+    NewsfeedComponent,
+    CreatePostComponent
   ],
   imports: [
     BrowserModule,
