@@ -5,9 +5,10 @@
 <div>
   <ul>
     <li *ngFor="let post of posts">
-      <p>{{post.gebruiker.voornaam}} schrijft
+      <p>VOORNAAM HIER schrijft
         op {{post.aanmaakDatum}}: </p> 
       <p>{{post.tekst}}</p>
+      <button (click)="delete(post.id)">Delete</button>
     </li>
   </ul>
 </div>

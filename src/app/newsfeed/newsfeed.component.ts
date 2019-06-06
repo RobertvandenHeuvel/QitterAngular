@@ -18,4 +18,14 @@ export class NewsfeedComponent implements OnInit {
       });
   }
 
+  delete(id: Number): void{
+    var choice = confirm("Wilt u deze post verwijderen?");
+    if(choice==true){
+      this.postService.delete(id).subscribe(
+      ()=> {this.ngOnInit()
+      alert("Post met id " + id + " is verwijderd")}
+      )
+    }
+  }
+
 }
