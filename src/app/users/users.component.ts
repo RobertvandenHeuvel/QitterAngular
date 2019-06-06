@@ -17,13 +17,25 @@ export class UsersComponent implements OnInit {
     });
   }
 
+  // dochange(){
+  //   //alert("you clicked me" );
+  //   var choice=confirm("Confirm pop up box");
+  //   var message;
+  //   if(choice==true)
+  //     message="you presed ok"
+  //   else
+  //     message="are you sure u want to cancel?";
+  //   alert(message);
+  // }
+
   delete(id: Number): void{
-    this.userService.delete(id).subscribe(
-      ()=> 
-      {alert("user met id " + id + " is verwijderd");
-      this.ngOnInit();
-      }
-    )
+    var choice = confirm("Wilt u deze gebruiker verwijderen?");
+    if(choice==true){
+      this.userService.delete(id).subscribe(
+      ()=> {this.ngOnInit()
+      alert("Gebruiker met id " + id + " is verwijderd")}
+      )
+    }
   }
 
 }
