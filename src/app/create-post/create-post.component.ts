@@ -19,23 +19,23 @@ export class CreatePostComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.userService.findById(1).subscribe(user => {
-      this.user=user;
-      console.log(user);
-      console.log(this.user);
-    });
-    console.log(this.user);
     this.post = new Post();
-    this.post.gebruiker = this.user;
-    console.log(this.post.gebruiker);
-    this.post.aanmaakDatum = new Date();
-    this.post.postSoort = 0;
+    this.getUser();
   }
 
   create(): void {
+    this.post.aanmaakDatum = new Date();
+    this.post.postSoort = 0;
+    this.post.gebruiker = this.user;
     this.postService.create(this.post).subscribe(() => {
-      console.log("in de create post subscribe");
     });
+    
   }
 
+  getUser(): void{
+    this.user = new User();
+    this.userService.findById(1).subscribe(user => {
+      this.user=user;
+    });
+  }
 }
