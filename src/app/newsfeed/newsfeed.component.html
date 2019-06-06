@@ -1,9 +1,12 @@
 <h1>Welcome to Newsfeed Henk</h1>
 
+<create-post></create-post>
+
 <div>
   <ul>
     <li *ngFor="let post of posts">
-      <p>{{post.gebruiker.voornaam}} schrijft: </p> 
+      <p>{{post.gebruiker.voornaam}} schrijft
+        op {{post.aanmaakDatum}}: </p> 
       <p>{{post.tekst}}</p>
     </li>
   </ul>
