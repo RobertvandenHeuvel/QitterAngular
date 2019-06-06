@@ -6,6 +6,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { AdjustUserComponent } from './adjust-user/adjust-user.component';
 import { UsersComponent } from './users/users.component';
 import { ShowUserComponent } from './show-user/show-user.component';
+import { NewsfeedComponent } from './newsfeed/newsfeed.component';
 
 
 
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'adjust-user', component: AdjustUserComponent},
   {path: 'adjust-user/:id', component: AdjustUserComponent},
   {path: 'show-user/:id', component: ShowUserComponent},
+  {path: 'newsfeed', component: NewsfeedComponent},
   {path: '', redirectTo: 'login-page', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent}
 ];
