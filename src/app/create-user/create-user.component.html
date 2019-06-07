@@ -1,19 +1,31 @@
-<h1>Create User pagina</h1>
 
-<div>
-  <label>username:<input [(ngModel)]="user.username" placeholder="username" /></label>
-  <br>
-  <label>wachtwoord:<input [(ngModel)]="user.wachtwoord" placeholder="wachtwoord" /></label>
-  <br>
-  <label>biografie:<input [(ngModel)]="user.bio" placeholder="bio" /></label>
-  <br>
-  <label>voornaam:<input [(ngModel)]="user.voornaam" placeholder="voornaam" /></label>
-  <br>
-  <label>achternaam:<input [(ngModel)]="user.achternaam" placeholder="achternaam" /></label>
-  <br>
-  <label>email:<input [(ngModel)]="user.email" placeholder="emailadress" /></label>
-  <br>
-  <label>rol:<input [(ngModel)]="user.rol" placeholder="rol" /></label>
-  <br>
-  <input type="button" (click)="create()" value="Create user">
+<body>
+<h2>Create User</h2>
+  
+<div class="wrapper">
+  <div class ="create-form">
+    <div class="input-fields">
+        
+    <input class="input" [(ngModel)]="user.username" placeholder="Username" />
+    <input class="input" [(ngModel)]="user.wachtwoord" placeholder="Wachtwoord" />
+    <input class="input" [(ngModel)]="user.voornaam" placeholder="Voornaam" />
+    <input class="input" [(ngModel)]="user.achternaam" placeholder="Achternaam" />
+    <input class="input" [(ngModel)]="user.email" placeholder="Emailadress" />
+    <input class="input" [(ngModel)]="user.rol" placeholder="Rol" />
+
+    </div>
+  
+  
+    <div class="bio">
+      <textarea class="input" [(ngModel)]="user.bio" placeholder="Biografie"></textarea>
+    
+      <div class="btn">
+        <input type="button" (click)="create()" value="Create user">
+      </div>
+
+    </div>
+
+  </div>
+
 </div>
+</body>
