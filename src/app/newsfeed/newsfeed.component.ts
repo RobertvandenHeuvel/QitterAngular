@@ -9,6 +9,7 @@ import { PostService } from '../post.service';
 })
 export class NewsfeedComponent implements OnInit {
   posts: Post[];
+  isCollapsed: Boolean = true;
   constructor(private postService: PostService) { }
 
   ngOnInit() {
@@ -22,10 +23,13 @@ export class NewsfeedComponent implements OnInit {
     var choice = confirm("Wilt u deze post verwijderen?");
     if(choice==true){
       this.postService.delete(id).subscribe(
-      ()=> {this.ngOnInit()
-      alert("Post met id " + id + " is verwijderd")}
+      ()=> {this.ngOnInit()}
       )
     }
+  }
+
+  bijVerandering(): void{
+    this.isCollapsed = !this.isCollapsed;
   }
 
 }
