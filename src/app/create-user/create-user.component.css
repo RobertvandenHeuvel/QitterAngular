@@ -1,4 +1,113 @@
-.form{
-    background-color: deepskyblue;
+
+/* CSS-Editor(s): Emiel  */
+
+@import url('https://fonts.googleapis.com/css?family-Roboto');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: url(https://pbs.twimg.com/tweet_video_thumb/DFiKHQ2XcAEmKOR.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.wrapper{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 0 20px;
+}
+
+.create-form{
+    max-width: 550px;
+    margin: 0 auto;
+    background: rgba(138, 46, 138, 0.8);
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    box-shadow: 0 0 10px rgba(223, 97, 223, 0.13);
+}
+
+.input-fields{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4%;
+}
+
+.input-fields,
+.bio{
+    width: 48%;
+}
+
+.input-fields .input,
+.bio textarea{
+    margin: 10px 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid #800080;
+    padding: 10px;
+    color: white;
+    width: 100%;
+}
+
+
+.bio textarea{
+    height: 280px;
+}
+
+/* Chrome */
+::-webkit-input-placeholder{
+    color: white;
+
+}
+
+/* Firefox */
+::-moz-input-placeholder{
+    color: white;
+
+}
+
+/* Internet Explorer */
+::-ms-input-placeholder{
+    color: white;
+
+}
+
+/* Zet de div met daarin de button, maar niet de button an sich
+
+//// Nog  fixen! \\\\
+
+.btn{
+    background: #800080;
     text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+
+
+} */
+
+/* Als het scherm verkleind wordt, pas de inhoud aan het scherm aan */
+
+@media screen and (max-width: 600px){
+    .create-form{
+        flex-direction: column;
+    }
+    .bio textarea{
+        height: 80px;
+    }
+    .input-fields,
+    .bio,
+    .btn{
+        width: 100%;
+    }
 }
