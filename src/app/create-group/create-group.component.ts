@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Group } from '../group';
 import { GroupService } from '../group.service';
+import { User } from '../user';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'create-group',
@@ -9,11 +11,15 @@ import { GroupService } from '../group.service';
 })
 export class CreateGroupComponent implements OnInit {
   private group:Group;
-  
-  constructor(private groupService: GroupService) { }
+  private users:User[];
+
+  constructor(private groupService: GroupService, private userService: UserService) { }
 
   ngOnInit() {
     this.group = new Group();
+    this.userService.list().subscribe(data => {
+      this.users = data;
+    });
   }
 
   create(): void {

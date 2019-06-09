@@ -1,6 +1,12 @@
-<h2>Create Group</h2>
-          
-  <input class="input" [(ngModel)]="group.groepsnaam" placeholder="Groepsnaam" />
-  <!-- <input class="input" [(ngModel)]="user.rol" placeholder="Rol" /> -->
-  <input type="button" (click)="create()" value="Create group">
-  
+<div class="creategroup_container">
+
+<div class="creategroupchild"> 
+  <h2>Create Group</h2>         
+  <input class="input" [(ngModel)]="group.groepsNaam" placeholder="Groepsnaam" />
+  <select class="input" [(ngModel)]="group.gebruikers">
+    <option *ngFor="let user of users">{{user.voornaam}}</option>
+  </select> 
+  <br/>
+  <button (click)="create()" >Create Group</button>
+</div>
+</div>  
