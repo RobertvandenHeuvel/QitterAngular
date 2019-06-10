@@ -9,23 +9,24 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./adjust-post.component.css']
 })
 export class AdjustPostComponent implements OnInit {
-  // private post: Post;
+  private post: Post;
 
   constructor(
-  //   private postService: PostService,
-  //   private route: ActivatedRoute
+    private postService: PostService,
+    private route: ActivatedRoute
     ) { }
 
   ngOnInit() {
-  //   const id = +this.route.snapshot.params["id"];
-  //   this.postService.findById(id).subscribe(post => {
-  //     this.post=post;
-  //   });
+    const id = +this.route.snapshot.params["id"];
+    this.postService.findById(id).subscribe(post => {
+      this.post=post;
+    });
   }
 
-  // adjust(): void {
-  //   this.postService.adjust(this.post).subscribe(() => {
-  //     console.log("adjust is gedaan")
-  //   });
-  // }
+  adjust(): void {
+    this.postService.adjust(this.post).subscribe(() => {
+      this.ngOnInit();
+      console.log("adjust is gedaan")
+    });
+  }
 }
