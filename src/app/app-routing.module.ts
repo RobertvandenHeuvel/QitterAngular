@@ -7,6 +7,7 @@ import { AdjustUserComponent } from './adjust-user/adjust-user.component';
 import { UsersComponent } from './users/users.component';
 import { ShowUserComponent } from './show-user/show-user.component';
 import { NewsfeedComponent } from './newsfeed/newsfeed.component';
+import { AdjustPostComponent } from './adjust-post/adjust-post.component';
 import { CreateGroupComponent } from './create-group/create-group.component';
 
 
@@ -18,6 +19,11 @@ const routes: Routes = [
   {path: 'adjust-user', component: AdjustUserComponent},
   {path: 'adjust-user/:id', component: AdjustUserComponent},
   {path: 'show-user/:id', component: ShowUserComponent},
+  {path: 'newsfeed', component: NewsfeedComponent,
+  children: [
+    {path: 'adjust-post/:id', component: AdjustPostComponent}
+  ]
+},
   {path: 'newsfeed', component: NewsfeedComponent},
   {path: 'create-group', component: CreateGroupComponent},
   {path: '', redirectTo: 'login-page', pathMatch: 'full'},

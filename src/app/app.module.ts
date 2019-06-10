@@ -15,6 +15,7 @@ import { ShowUserComponent } from './show-user/show-user.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NewsfeedComponent } from './newsfeed/newsfeed.component';
 import { CreatePostComponent } from './create-post/create-post.component';
+import { AdjustPostComponent } from './adjust-post/adjust-post.component';
 import { CreateGroupComponent } from './create-group/create-group.component';
 
 @NgModule({
@@ -29,6 +30,7 @@ import { CreateGroupComponent } from './create-group/create-group.component';
     NavbarComponent,
     NewsfeedComponent,
     CreatePostComponent,
+    AdjustPostComponent,
     CreateGroupComponent
   ],
   imports: [

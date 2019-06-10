@@ -3,6 +3,7 @@ import { Post } from '../post';
 import { PostService } from '../post.service';
 import { User } from '../user';
 import { UserService } from '../user.service';
+import { NewsfeedComponent } from '../newsfeed/newsfeed.component';
 
 @Component({
   selector: 'create-post',
@@ -12,10 +13,12 @@ import { UserService } from '../user.service';
 export class CreatePostComponent implements OnInit {
   private post:Post;
   private user: User;
+  
 
   constructor(
     private postService: PostService,
-    private userService: UserService
+    private userService: UserService,
+    private newsFeedComponent: NewsfeedComponent
     ) { }
 
   ngOnInit() {
@@ -28,6 +31,8 @@ export class CreatePostComponent implements OnInit {
     this.post.postSoort = 0;
     this.post.gebruiker = this.user;
     this.postService.create(this.post).subscribe(() => {
+      this.newsFeedComponent.ngOnInit();
+      this.ngOnInit();      
     });
     
   }
