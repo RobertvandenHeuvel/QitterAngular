@@ -25,7 +25,6 @@ export class AdjustPostComponent implements OnInit {
 
   adjust(): void {
     this.postService.adjust(this.post).subscribe(() => {
-      this.ngOnInit();
       console.log("adjust is gedaan")
     });
   }

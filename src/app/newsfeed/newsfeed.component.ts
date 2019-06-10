@@ -10,7 +10,9 @@ import { PostService } from '../post.service';
 export class NewsfeedComponent implements OnInit {
   posts: Post[];
   isCollapsed: Boolean = true;
-  constructor(private postService: PostService) { }
+  constructor(private postService: PostService) {
+    this.isCollapsed = true;
+   }
 
   ngOnInit() {
     this.postService.list().subscribe(
@@ -30,6 +32,7 @@ export class NewsfeedComponent implements OnInit {
 
   bijVerandering(): void{
     this.isCollapsed = !this.isCollapsed;
+    this.ngOnInit();
   }
 
 }
