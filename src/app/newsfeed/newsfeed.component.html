@@ -10,8 +10,12 @@
       <div *ngIf="isCollapsed">
       <p>{{post.tekst}}</p>
       </div>
+      <div *ngIf="!isCollapsed">
+      <router-outlet></router-outlet>    
+      </div>
       <div>
-          <button routerLink="['/adjust-post', post.id]">Wijzigen</button>
+          <button *ngIf="isCollapsed" (click)="bijVerandering()">Wijzigen</button>
+          <button *ngIf="!isCollapsed" (click)="bijVerandering()">Terug</button>
           <button (click)="delete(post.id)">Delete</button>
       </div>
     </li>
