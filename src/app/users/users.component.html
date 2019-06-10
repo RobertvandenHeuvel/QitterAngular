@@ -2,7 +2,8 @@
 <div>
   <h1>User list</h1>
   <ul class="heleLijst">
-    <li *ngFor="let user of users">{{ user.id }}: {{ user.voornaam }} {{user.achternaam}} &nbsp;
+    <li *ngFor="let user of users">
+      <div class="namenDisplay">{{ user.id }}: {{ user.voornaam }} {{user.achternaam}}</div> &nbsp;
       <a class="showLink" [routerLink]="['/show-user', user.id]">Show</a> &nbsp;
       <a [routerLink]="['/adjust-user', user.id]">Edit</a> &nbsp;
       <button (click)="delete(user.id)">Delete</button>
