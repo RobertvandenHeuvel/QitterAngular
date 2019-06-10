@@ -14,7 +14,7 @@
       <router-outlet></router-outlet>    
       </div>
       <div>
-          <button *ngIf="isCollapsed" (click)="bijVerandering()">Wijzigen</button>
+          <button *ngIf="isCollapsed" (click)="bijVerandering()" [routerLink]="['adjust-post', post.id]">Wijzigen</button>
           <button *ngIf="!isCollapsed" (click)="bijVerandering()">Terug</button>
           <button (click)="delete(post.id)">Delete</button>
       </div>
