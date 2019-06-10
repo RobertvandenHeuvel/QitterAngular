@@ -5,5 +5,68 @@ ul{
 
 li{
     margin: 5px 0px;
+}
+
+body{
+    background: url(https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/10857990_10203419017291442_3471206346588570107_n.jpg?_nc_cat=106&_nc_ht=scontent-amt2-1.xx&oh=f2b92fad672eda7f0841ae5b75db9c06&oe=5D9A40ED);
+    background-color: #9C4AF0;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    height: 90vh;
+}
+
+.heleLijst{
+    background-color: #de4bf2;
+    width: 45vh;
+    color: white;
     
+}
+
+button {
+    background-color: #640080;/* Green */
+    border: none;
+    color: white;
+    padding: 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px 1px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  button:hover{
+    background-color: #b538c5;
+  }
+
+a {
+    color: #f2f2f2;
+    text-decoration: none;
+    text-align: center;
+    font-size: 17px;
+  }
+
+a:hover{
+   transition-duration: 0.4s;
+    background-color: #9C4AF0;
+}
+
+h1{
+    color: #ffffff;
+}
+
+@media screen and (max-width: 600px){
+    .create-form{
+        flex-direction: column;
+    }
+    .bio textarea{
+        height: 80px;
+    }
+    .input-fields,
+    .bio,
+    .btn{
+        width: 100%;
+    }
 }
