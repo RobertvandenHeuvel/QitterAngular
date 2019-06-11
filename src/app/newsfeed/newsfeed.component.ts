@@ -32,7 +32,6 @@ export class NewsfeedComponent implements OnInit {
 
   bijVerandering(): void{
     this.isCollapsed = !this.isCollapsed;
-    this.ngOnInit();
   }
 
 }
