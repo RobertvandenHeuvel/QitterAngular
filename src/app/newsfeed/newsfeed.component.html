@@ -5,9 +5,19 @@
 <div >
   <ul>
     <li *ngFor="let post of posts">
-      <p>{{post.gebruiker.voornaam}} schrijft
+      <p>{{post.gebruiker.username}} schrijft
         op {{post.aanmaakDatum}}: </p> 
+      <div *ngIf="isCollapsed">
       <p>{{post.tekst}}</p>
+      </div>
+      <div *ngIf="!isCollapsed">
+      <router-outlet></router-outlet>    
+      </div>
+      <div>
+          <button *ngIf="isCollapsed" (click)="bijVerandering()" [routerLink]="['adjust-post', post.id]">Wijzigen</button>
+          <button *ngIf="!isCollapsed" (click)="bijVerandering()">Terug</button>
+          <button (click)="delete(post.id)">Delete</button>
+      </div>
     </li>
   </ul>
 </div>

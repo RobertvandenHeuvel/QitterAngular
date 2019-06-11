@@ -9,13 +9,30 @@ import { PostService } from '../post.service';
 })
 export class NewsfeedComponent implements OnInit {
   posts: Post[];
-  constructor(private postService: PostService) { }
+  isCollapsed: Boolean = true;
+  constructor(private postService: PostService) {
+    this.isCollapsed = true;
+   }
 
   ngOnInit() {
     this.postService.list().subscribe(
       data => {
         this.posts = data;
       });
+  }
+
+  delete(id: Number): void{
+    var choice = confirm("Wilt u deze post verwijderen?");
+    if(choice==true){
+      this.postService.delete(id).subscribe(
+      ()=> {this.ngOnInit()}
+      )
+    }
+  }
+
+  bijVerandering(): void{
+    this.isCollapsed = !this.isCollapsed;
+    this.ngOnInit();
   }
 
 }
