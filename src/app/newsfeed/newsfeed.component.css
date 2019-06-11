@@ -1,0 +1,58 @@
+
+/* CSS-Editor(s): Emiel  */
+
+*{
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: url(https://image.freepik.com/free-vector/abstract-shiny-background-color-purple_1053-25.jpg);
+    background-size: cover;
+    height: 100%;
+}
+
+h1 {
+    color: whitesmoke;
+    margin: 10px;
+    padding: 10px;
+}
+
+.container{
+    margin: 10px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.feed{
+    max-width: 550px;
+    margin: 0 auto;
+    background: rgba(138, 46, 138, 0.8);
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(223, 97, 223, 0.13);
+    list-style: none;
+}
+
+.post-complete{
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;
+}
+
+.post-details{
+    text-decoration: underline;
+
+}
+
+.post-inhoud{
+font-style: oblique;
+margin: 5px;
+padding: 5px;
+}
