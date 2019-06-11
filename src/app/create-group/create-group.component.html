@@ -3,10 +3,10 @@
 <div class="creategroupchild"> 
   <h2>Create Group</h2>         
   <input class="input" [(ngModel)]="group.groepsNaam" placeholder="Groepsnaam" />
-  <select class="input" [(ngModel)]="group.gebruikers">
-    <option *ngFor="let user of users">{{user.voornaam}}</option>
+  <select [(ngModel)]="user" (ngModelChange)='selectedUser($event)'>
+    <option *ngFor="let user of users" [value]="user.id">{{user.voornaam}}</option>
   </select> 
   <br/>
-  <button (click)="create()" >Create Group</button>
+  <button (click)="create(user)" >Create Group</button>
 </div>
 </div>  
