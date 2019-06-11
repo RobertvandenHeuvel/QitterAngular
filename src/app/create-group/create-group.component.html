@@ -2,9 +2,10 @@
 
 <div class="creategroupchild"> 
   <h2>Create Group</h2>         
-  <input class="input" [(ngModel)]="group.groepsNaam" placeholder="Groepsnaam" />
-  <select [(ngModel)]="user" (ngModelChange)='selectedUser($event)'>
-    <option *ngFor="let user of users" [value]="user.id">{{user.voornaam}}</option>
+  <input class="input" [(ngModel)]="group.groepsNaam" placeholder="Groepsnaam" required/>
+  <select [(ngModel)]="user" (ngModelChange)='selectedUser($event)' multiple required>
+    <option disabled>Selecteer groepsleden</option>
+    <option *ngFor="let user of users" [value]="user.id">{{user.voornaam}}&nbsp;{{user.achternaam}}</option>
   </select> 
   <br/>
   <button (click)="create(user)" >Create Group</button>

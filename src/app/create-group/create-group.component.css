@@ -27,8 +27,27 @@ select{
     border: solid 1px ;
     padding: 5px;
     background-color: #f2d9ff;
+    overflow-y: auto;
+}
+
+option:disabled{
+    font-style: italic;
+    padding: 2px;
 }
 
 button{
     margin: 0 auto;
+    border-radius: 3px;
+    background-color: #555555;
+    border: none;
+    color: #e7e7e7;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+h2{
+    text-align: center;
 }

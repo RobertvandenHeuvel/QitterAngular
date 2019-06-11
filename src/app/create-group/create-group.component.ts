@@ -18,9 +18,20 @@ export class CreateGroupComponent implements OnInit {
 
   ngOnInit() {
     this.group = new Group();
+    this.getUsers();
+  }
+
+  getUsers(): void{
     this.userService.list().subscribe(data => {
       this.users = data;
     });
+  }
+
+  onItemSelect(item: any) {
+    console.log(item);
+  }
+  onSelectAll(items: any) {
+    console.log(items);
   }
 
   create(): void {
