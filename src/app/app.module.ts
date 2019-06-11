@@ -18,8 +18,6 @@ import { CreatePostComponent } from './create-post/create-post.component';
 import { AdjustPostComponent } from './adjust-post/adjust-post.component';
 import { CreateGroupComponent } from './create-group/create-group.component';
 
-import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,8 +37,7 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    NgMultiSelectDropDownModule.forRoot()
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
