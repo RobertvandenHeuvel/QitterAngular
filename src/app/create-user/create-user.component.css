@@ -1,14 +1,14 @@
 
 /* CSS-Editor(s): Emiel  */
 
-@import url('https://fonts.googleapis.com/css?family-Roboto');
+/* @import url('https://fonts.googleapis.com/css?family-Roboto'); */
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     outline: none;
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -19,8 +19,8 @@ body{
 
 .wrapper{
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 30%;
+    bottom: 30%;
     width: 100%;
     padding: 0 20px;
 }
