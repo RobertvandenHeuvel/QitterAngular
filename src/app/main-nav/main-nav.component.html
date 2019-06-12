@@ -13,7 +13,7 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-      <button
+      <button class="togglebutton"
         type="button"
         aria-label="Toggle sidenav"
         mat-icon-button
@@ -21,13 +21,16 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <img src="assets/image/qienlogo.png" height="42" width="32" hspace="10">
-      <span class="spacer">Qitter</span>
-      <span class="spacer"></span>
-      <a mat-list-item routerLink="/newsfeed">Newsfeed</a>
-      <a mat-list-item routerLink="/users">Gebruikers</a>
-      <a mat-list-item routerLink="/create-user">Maak Gebruiker</a>
-      <a mat-list-item routerLink="/create-group">Maak Groep</a>
+      <div class="bovenkant"> 
+          <span class="spacer">Qitter</span>
+          <span class="spacer"></span>
+          <a class="togglebutton" mat-list-item routerLink="/newsfeed">Newsfeed</a>
+          <a class="togglebutton" mat-list-item routerLink="/users">Gebruikers</a>
+          <a class="togglebutton" mat-list-item routerLink="/create-user">Maak Gebruiker</a>
+          <a class="togglebutton" mat-list-item routerLink="/create-group">Maak Groep</a>
+    </div>
+    <img src="assets/image/qienlogo.png" height="42" width="32" hspace="10">
+
     </mat-toolbar>
     <ng-content></ng-content>
   </mat-sidenav-content>
