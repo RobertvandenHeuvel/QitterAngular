@@ -28,7 +28,7 @@ export class UserService {
 
   adjust(user: User): Observable<User> {
     let resultFromService: Observable<User> = this.httpClient.put<User>(`${this.url}/${this.endpoint}/${user.id}`, user);
-    console.log("kom je hier: " + resultFromService);
+
     return resultFromService;
   }
 
