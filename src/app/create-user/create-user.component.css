@@ -80,21 +80,22 @@ body{
 
 }
 
-/* Zet de div met daarin de button, maar niet de button an sich
+/* Zet de div met daarin de button, maar niet de button an sich */
 
-//// Nog  fixen! \\\\
+/* //// Nog  fixen! \\\\ */
 
-.btn{
+input[type=button]{
     background: #800080;
     text-align: center;
     padding: 15px;
+    width: 100%;
     border-radius: 5px;
     color: #fff;
     cursor: pointer;
     text-transform: uppercase;
 
 
-} */
+}
 
 /* Als het scherm verkleind wordt, pas de inhoud aan het scherm aan */
 
