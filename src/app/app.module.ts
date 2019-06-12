@@ -17,6 +17,10 @@ import { NewsfeedComponent } from './newsfeed/newsfeed.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { AdjustPostComponent } from './adjust-post/adjust-post.component';
 import { CreateGroupComponent } from './create-group/create-group.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule} from '@angular/material';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [
@@ -31,13 +35,21 @@ import { CreateGroupComponent } from './create-group/create-group.component';
     NewsfeedComponent,
     CreatePostComponent,
     AdjustPostComponent,
-    CreateGroupComponent
+    CreateGroupComponent,
+    MainNavComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

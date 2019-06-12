@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Post } from '../post';
 import { PostService } from '../post.service';
 import { ActivatedRoute } from '@angular/router';
+import { NewsfeedComponent } from '../newsfeed/newsfeed.component';
 
 @Component({
   selector: 'adjust-post',
@@ -13,7 +14,8 @@ export class AdjustPostComponent implements OnInit {
 
   constructor(
     private postService: PostService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private newsfeedComponent: NewsfeedComponent
     ) { }
 
   ngOnInit() {
@@ -25,6 +27,8 @@ export class AdjustPostComponent implements OnInit {
 
   adjust(): void {
     this.postService.adjust(this.post).subscribe(() => {
+      this.newsfeedComponent.ngOnInit();
+      this.newsfeedComponent.bijVerandering();
       console.log("adjust is gedaan")
     });
   }
