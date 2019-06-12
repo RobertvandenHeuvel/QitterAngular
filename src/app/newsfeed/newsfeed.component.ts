@@ -11,7 +11,6 @@ export class NewsfeedComponent implements OnInit {
   posts: Post[];
   isCollapsed: Boolean = true;
   constructor(private postService: PostService) {
-    this.isCollapsed = true;
    }
 
   ngOnInit() {
