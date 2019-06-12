@@ -21,8 +21,7 @@ export class UsersComponent implements OnInit {
     var choice = confirm("Wilt u deze gebruiker verwijderen?");
     if(choice==true){
       this.userService.delete(id).subscribe(
-      ()=> {this.ngOnInit()
-      alert("Gebruiker met id " + id + " is verwijderd")}
+      ()=> {this.ngOnInit()}
       )
     }
   }
