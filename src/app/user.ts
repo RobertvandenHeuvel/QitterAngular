@@ -7,5 +7,5 @@ export class User {
     achternaam: String;
     email: String;
     rol: any;
-    
+    posts: any[];
 }
