@@ -3,6 +3,8 @@ import { Post } from '../post';
 import { PostService } from '../post.service';
 import { ActivatedRoute } from '@angular/router';
 import { NewsfeedComponent } from '../newsfeed/newsfeed.component';
+import { User } from '../user';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'adjust-post',
@@ -10,12 +12,15 @@ import { NewsfeedComponent } from '../newsfeed/newsfeed.component';
   styleUrls: ['./adjust-post.component.css']
 })
 export class AdjustPostComponent implements OnInit {
-  private post: Post;
+  private post:Post;
+  private user: User;
+  private posts: Post[];
 
   constructor(
     private postService: PostService,
     private route: ActivatedRoute,
-    private newsfeedComponent: NewsfeedComponent
+    private newsfeedComponent: NewsfeedComponent,
+    private userService: UserService
     ) { }
 
   ngOnInit() {
@@ -23,6 +28,8 @@ export class AdjustPostComponent implements OnInit {
     this.postService.findById(id).subscribe(post => {
       this.post=post;
     });
+    this.posts = new Array;
+    this.getUser();
   }
 
   adjust(): void {
@@ -31,5 +38,25 @@ export class AdjustPostComponent implements OnInit {
       this.newsfeedComponent.bijVerandering();
       console.log("adjust is gedaan")
     });
+  }
+
+  putUser(posts: Post[]):void{
+    this.user.posts = posts;
+    this.userService.adjust(this.user).subscribe(() =>{
+    });
+  }
+
+  getUser(): void{
+    this.user = new User();
+    this.userService.findById(5).subscribe(user => {
+      this.user=user;
+      this.create();
+    });
+  }
+  create(): void {
+    this.post.aanmaakDatum = new Date();
+    this.post.postSoort = 0;
+    this.posts.push(this.post);
+    this.putUser(this.posts);
   }
 }
