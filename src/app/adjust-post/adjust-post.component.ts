@@ -27,9 +27,9 @@ export class AdjustPostComponent implements OnInit {
     const id = +this.route.snapshot.params["id"];
     this.postService.findById(id).subscribe(post => {
       this.post=post;
+      console.log(this.post);
     });
     this.posts = new Array;
-    this.getUser();
   }
 
   adjust(): void {
@@ -43,19 +43,19 @@ export class AdjustPostComponent implements OnInit {
   putUser(posts: Post[]):void{
     this.user.posts = posts;
     this.userService.adjust(this.user).subscribe(() =>{
+      this.newsfeedComponent.ngOnInit();
+      this.newsfeedComponent.bijVerandering();
     });
   }
 
   getUser(): void{
     this.user = new User();
-    this.userService.findById(5).subscribe(user => {
+    this.userService.findById(1).subscribe(user => {
       this.user=user;
       this.create();
     });
   }
   create(): void {
-    this.post.aanmaakDatum = new Date();
-    this.post.postSoort = 0;
     this.posts.push(this.post);
     this.putUser(this.posts);
   }
