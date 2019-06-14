@@ -1,12 +1,11 @@
 import { User } from './user';
-import { Reactie } from './reactie';
+import { Post } from './post';
 
-export class Post {
+export class Reactie {
     id: Number;
-    postSoort: any;
     tekst: String;
     aanmaakDatum: Date;
     gebruiker: User;
     gebruikersMetToegang: User[];
-    reacties: Reactie[];
+    post: Post;
 }

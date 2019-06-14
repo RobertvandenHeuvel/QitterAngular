@@ -14,7 +14,7 @@
     <button (click)="delete(post.id)">Delete</button>
 
     <div *ngIf="commentBoolean">
-        <textarea placeholder="typ hier je comment"></textarea>
+        <textarea [(ngModel)]="reactie.tekst" placeholder="typ hier je comment"></textarea>
         <button (click)="createReactie()">Opslaan</button>
         <button (click)="bijComment()">Terug</button>
     </div>
