@@ -19,11 +19,12 @@ export class NewsfeedComponent implements OnInit {
     this.postService.list().subscribe(
       data => {
         data.sort((a , b) =>{
-          return a < b ? 1 : -1;
+          return new Date(b.aanmaakDatum).getTime() - new Date(a.aanmaakDatum).getTime();
         })
         this.posts = data;
        
   })
+  console.log("joe anja");
 }
 
   delete(id: Number): void{
