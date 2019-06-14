@@ -48,7 +48,7 @@ export class AdjustPostComponent implements OnInit {
 
   getUser(): void{
     this.user = new User();
-    this.userService.findById(5).subscribe(user => {
+    this.userService.findById(1).subscribe(user => {
       this.user=user;
       this.create();
     });
