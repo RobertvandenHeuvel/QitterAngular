@@ -27,15 +27,6 @@ export class NewsfeedComponent implements OnInit {
   console.log("joe anja");
 }
 
-  delete(id: Number): void{
-    var choice = confirm("Wilt u deze post verwijderen?");
-    if(choice==true){
-      this.postService.delete(id).subscribe(
-      ()=> {this.ngOnInit()}
-      )
-    }
-  }
-
   bijVerandering(): void{
     this.isCollapsed = !this.isCollapsed;
   }
