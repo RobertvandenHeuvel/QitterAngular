@@ -32,14 +32,6 @@ export class AdjustPostComponent implements OnInit {
     this.posts = new Array;
   }
 
-  adjust(): void {
-    this.postService.adjust(this.post).subscribe(() => {
-      this.newsfeedComponent.ngOnInit();
-      this.newsfeedComponent.bijVerandering();
-      console.log("adjust is gedaan")
-    });
-  }
-
   putUser(posts: Post[]):void{
     this.user.posts = posts;
     this.userService.adjust(this.user).subscribe(() =>{

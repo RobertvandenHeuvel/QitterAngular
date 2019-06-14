@@ -21,15 +21,11 @@ export class UserService {
   }
 
   create(user: User): Observable<User> {
-    let resultFromService: Observable<User> = this.httpClient.post<User>(`${this.url}/${this.endpoint}`, user);
-
-    return resultFromService;
+    return this.httpClient.post<User>(`${this.url}/${this.endpoint}`, user);
   }
 
   adjust(user: User): Observable<User> {
-    let resultFromService: Observable<User> = this.httpClient.put<User>(`${this.url}/${this.endpoint}/${user.id}`, user);
-
-    return resultFromService;
+   return this.httpClient.put<User>(`${this.url}/${this.endpoint}/${user.id}`, user);
   }
 
   delete(id: Number): Observable<User>{
