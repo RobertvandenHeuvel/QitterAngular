@@ -5,6 +5,8 @@ import { ActivatedRoute } from '@angular/router';
 import { NewsfeedComponent } from '../newsfeed/newsfeed.component';
 import { User } from '../user';
 import { UserService } from '../user.service';
+import { Reactie } from '../reactie';
+import { ReactieService } from '../reactie.service';
 
 @Component({
   selector: 'adjust-post',
@@ -15,8 +17,8 @@ export class AdjustPostComponent implements OnInit {
   @Input() post: Post;
   private user: User;
   private posts: Post[];
-  private reacties: Post[];
-  private reactie: Post;
+  private reacties: Reactie[];
+  private reactie: Reactie;
   private isChanging: Boolean = false;
   private postValue: String;
   private commentBoolean: Boolean = false;
@@ -34,6 +36,7 @@ export class AdjustPostComponent implements OnInit {
       this.post=post;
       console.log(this.post);
     });
+    this.reactie = new Reactie();
     this.posts = new Array;
     this.reacties = new Array;
     this.postValue = this.post.tekst;
@@ -80,12 +83,16 @@ export class AdjustPostComponent implements OnInit {
   }
 
   createReactie(): void {
+    this.reactie.aanmaakDatum = new Date();
     this.reacties.push(this.reactie);
+    console.log(this.reactie);
     this.putPost(this.reacties);
   }
 
-  putPost(reacties: Post[]):void{
+  putPost(reacties: Reactie[]):void{
+    console.log(this.reactie);
     this.post.reacties = reacties;
+    console.log(this.post);
     this.postService.adjust(this.post).subscribe(() =>{
       // this.newsfeedComponent.ngOnInit();
       // this.newsfeedComponent.bijVerandering();
