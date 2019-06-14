@@ -36,7 +36,7 @@ export class CreatePostComponent implements OnInit {
     };
     getUser(): void{
       this.user = new User();
-      this.userService.findById(1).subscribe(user => {
+      this.userService.findById(5).subscribe(user => {
         this.user=user;
       });
 
@@ -46,8 +46,8 @@ export class CreatePostComponent implements OnInit {
     putUser(posts: Post[]):void{
       this.user.posts = posts;
       this.userService.adjust(this.user).subscribe(() =>{
-      this.newsFeedComponent.ngOnInit();
       });
     }
   
   }
+
