@@ -18,7 +18,7 @@ export class CreatePostComponent implements OnInit {
   constructor(
     private postService: PostService,
     private userService: UserService,
-    private newsFeedComponent: NewsfeedComponent
+    private newsfeedComponent: NewsfeedComponent
     ) { }
 
   ngOnInit() {
@@ -46,6 +46,7 @@ export class CreatePostComponent implements OnInit {
     putUser(posts: Post[]):void{
       this.user.posts = posts;
       this.userService.adjust(this.user).subscribe(() =>{
+        this.newsfeedComponent.ngOnInit();
       });
     }
   
