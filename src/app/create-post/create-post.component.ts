@@ -13,7 +13,7 @@ import { NewsfeedComponent } from '../newsfeed/newsfeed.component';
 export class CreatePostComponent implements OnInit {
   private post:Post;
   private user: User;
-  
+  private posts: Post[];
 
   constructor(
     private postService: PostService,
@@ -23,24 +23,31 @@ export class CreatePostComponent implements OnInit {
 
   ngOnInit() {
     this.post = new Post();
+    this.posts = new Array;
     this.getUser();
   }
 
   create(): void {
     this.post.aanmaakDatum = new Date();
     this.post.postSoort = 0;
-    this.post.gebruiker = this.user;
-    this.postService.create(this.post).subscribe(() => {
-      this.newsFeedComponent.ngOnInit();
-      this.ngOnInit();      
-    });
+    this.posts.push(this.post);
+    this.putUser(this.posts);
+       this.ngOnInit();      
+    };
+    getUser(): void{
+      this.user = new User();
+      this.userService.findById(2).subscribe(user => {
+        this.user=user;
+      });
+
+   
+    }
     
+    putUser(posts: Post[]):void{
+      this.user.posts = posts;
+      this.userService.adjust(this.user).subscribe(() =>{
+      });
+    }
+  
   }
 
-  getUser(): void{
-    this.user = new User();
-    this.userService.findById(5).subscribe(user => {
-      this.user=user;
-    });
-  }
-}

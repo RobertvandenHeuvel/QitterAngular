@@ -21,7 +21,6 @@ export class PostService {
 
   create(post: Post): Observable<Post> {
     let resultFromService: Observable<Post> = this.httpClient.post<Post>(`${this.url}/${this.endpoint}`, post);
-
     return resultFromService;
   }
 
