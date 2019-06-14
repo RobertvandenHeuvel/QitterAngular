@@ -15,8 +15,11 @@ export class AdjustPostComponent implements OnInit {
   @Input() post: Post;
   private user: User;
   private posts: Post[];
+  private reacties: Post[];
+  private reactie: Post;
   private isChanging: Boolean = false;
   private postValue: String;
+  private commentBoolean: Boolean = false;
 
   constructor(
     private postService: PostService,
@@ -32,6 +35,7 @@ export class AdjustPostComponent implements OnInit {
       console.log(this.post);
     });
     this.posts = new Array;
+    this.reacties = new Array;
     this.postValue = this.post.tekst;
   }
 
@@ -69,6 +73,24 @@ export class AdjustPostComponent implements OnInit {
       }
       )
     }
+  }
+
+  bijComment(): void{
+    this.commentBoolean = !this.commentBoolean;
+  }
+
+  createReactie(): void {
+    this.reacties.push(this.reactie);
+    this.putPost(this.reacties);
+  }
+
+  putPost(reacties: Post[]):void{
+    this.post.reacties = reacties;
+    this.postService.adjust(this.post).subscribe(() =>{
+      // this.newsfeedComponent.ngOnInit();
+      // this.newsfeedComponent.bijVerandering();
+      console.log("in putPost methode");
+    });
   }
 
 }
