@@ -8,21 +8,7 @@
 <div class="container">
   <ul class="feed">
     <li class="post-complete" *ngFor="let post of posts">
-      <p class="post-details">{{post.gebruiker.username}} schrijft
-        op {{post.aanmaakDatum}}: </p> 
-      <div *ngIf="isCollapsed">
-      <p class="post-inhoud" [id]="post.id">{{post.tekst}}</p>
-      </div>
-
-      <div *ngIf="!isCollapsed">
-      <router-outlet></router-outlet>    
-      </div>
-      
-      <div>
-          <button *ngIf="isCollapsed" (click)="bijVerandering()" [routerLink]="['adjust-post', post.id]">Wijzigen</button>
-          <button *ngIf="!isCollapsed" (click)="bijVerandering()">Terug</button>
-          <button (click)="delete(post.id)">Delete</button>
-      </div>
+     <adjust-post [post]="post"></adjust-post>
     </li>
   </ul>
 </div>

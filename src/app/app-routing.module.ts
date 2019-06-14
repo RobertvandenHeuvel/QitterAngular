@@ -19,11 +19,6 @@ const routes: Routes = [
   {path: 'adjust-user', component: AdjustUserComponent},
   {path: 'adjust-user/:id', component: AdjustUserComponent},
   {path: 'show-user/:id', component: ShowUserComponent},
-  {path: 'newsfeed', component: NewsfeedComponent,
-  children: [
-    {path: 'adjust-post/:id', component: AdjustPostComponent}
-  ]
-},
   {path: 'newsfeed', component: NewsfeedComponent},
   {path: 'create-group', component: CreateGroupComponent},
   {path: '', redirectTo: 'login-page', pathMatch: 'full'},

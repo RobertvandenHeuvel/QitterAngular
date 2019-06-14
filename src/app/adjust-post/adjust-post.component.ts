@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Post } from '../post';
 import { PostService } from '../post.service';
 import { ActivatedRoute } from '@angular/router';
@@ -12,9 +12,11 @@ import { UserService } from '../user.service';
   styleUrls: ['./adjust-post.component.css']
 })
 export class AdjustPostComponent implements OnInit {
-  private post:Post;
+  @Input() post: Post;
   private user: User;
   private posts: Post[];
+  private isChanging: Boolean = false;
+  private postValue: String;
 
   constructor(
     private postService: PostService,
@@ -30,6 +32,7 @@ export class AdjustPostComponent implements OnInit {
       console.log(this.post);
     });
     this.posts = new Array;
+    this.postValue = this.post.tekst;
   }
 
   putUser(posts: Post[]):void{
@@ -51,4 +54,21 @@ export class AdjustPostComponent implements OnInit {
     this.posts.push(this.post);
     this.putUser(this.posts);
   }
+
+  bijVerandering(): void{
+    this.post.tekst = this.postValue;
+    this.isChanging = !this.isChanging;
+  }
+
+  delete(id: Number): void{
+    var choice = confirm("Wilt u deze post verwijderen?");
+    if(choice==true){
+      this.postService.delete(id).subscribe(
+      ()=> {
+        this.newsfeedComponent.ngOnInit();
+      }
+      )
+    }
+  }
+
 }
