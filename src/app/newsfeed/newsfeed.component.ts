@@ -10,15 +10,21 @@ import { PostService } from '../post.service';
 export class NewsfeedComponent implements OnInit {
   posts: Post[];
   isCollapsed: Boolean = true;
+
+
   constructor(private postService: PostService) {
    }
 
   ngOnInit() {
     this.postService.list().subscribe(
       data => {
+        data.sort((a , b) =>{
+          return a < b ? 1 : -1;
+        })
         this.posts = data;
-      });
-  }
+       
+  })
+}
 
   delete(id: Number): void{
     var choice = confirm("Wilt u deze post verwijderen?");
