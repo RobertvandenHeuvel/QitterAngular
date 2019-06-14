@@ -7,4 +7,5 @@ export class Post {
     aanmaakDatum: Date;
     gebruiker: User;
     gebruikersMetToegang: User[];
+    reacties: Post[];
 }
