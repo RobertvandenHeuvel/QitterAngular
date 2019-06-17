@@ -50,6 +50,7 @@ export class CreateReactieComponent implements OnInit {
     console.log("hoi");
     this.post.reacties = reacties;
     console.log(this.post.reacties);
+    console.log(this.post);
     this.postService.adjust(this.post).subscribe(
     () => {
       this.bijComment();

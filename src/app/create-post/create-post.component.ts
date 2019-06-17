@@ -41,6 +41,7 @@ export class CreatePostComponent implements OnInit {
     
     putUser(posts: Post[]):void{
       this.user.posts = posts;
+      console.log(this.user);
       this.userService.adjust(this.user).subscribe(() =>{
         this.newsfeedComponent.ngOnInit();
       });
