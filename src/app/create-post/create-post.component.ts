@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from '../post';
-import { PostService } from '../post.service';
 import { User } from '../user';
 import { UserService } from '../user.service';
 import { NewsfeedComponent } from '../newsfeed/newsfeed.component';
