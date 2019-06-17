@@ -7,10 +7,10 @@
         <create-reactie [post]="post"></create-reactie>
     </div>
     <div  *ngIf="isChanging">
-        <textarea *ngIf="isChanging" [(ngModel)]="post.tekst"></textarea> 
+        <textarea [(ngModel)]="post.tekst"></textarea> 
         <button (click)="getUser()">Opslaan</button>
         <button (click)="bijVerandering()">Terug</button>
     </div>
-
+    <show-comment [post]="post"></show-comment>
 
     
