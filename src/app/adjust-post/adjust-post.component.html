@@ -1,3 +1,4 @@
+<div class="post-background">
 <p class="post-details">{{post.gebruiker.username}} schrijft
     op {{post.aanmaakDatum}}: </p> 
     <div *ngIf="!isChanging">
@@ -11,6 +12,8 @@
         <button (click)="getUser()">Opslaan</button>
         <button (click)="bijVerandering()">Terug</button>
     </div>
+    <div class="comment">
     <show-comment [post]="post"></show-comment>
-
+</div>
+</div>
     
