@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Reactie } from '../reactie';
-import { ReactieService } from '../reactie.service';
 import { NewsfeedComponent } from '../newsfeed/newsfeed.component';
 import { UserService } from '../user.service';
 import { User } from '../user';
@@ -29,6 +28,7 @@ export class CreateReactieComponent implements OnInit {
     this.reactie = new Reactie();
     this.getUser();
     this.reacties = new Array;
+    
   }
 
   createReactie(): void {
@@ -50,6 +50,7 @@ export class CreateReactieComponent implements OnInit {
     console.log("hoi");
     this.post.reacties = reacties;
     console.log(this.post.reacties);
+    console.log(this.post);
     this.postService.adjust(this.post).subscribe(
     () => {
       this.bijComment();
