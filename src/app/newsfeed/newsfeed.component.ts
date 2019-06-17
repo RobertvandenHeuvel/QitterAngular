@@ -24,7 +24,6 @@ export class NewsfeedComponent implements OnInit {
         this.posts = data;
        
   })
-  console.log("joe anja");
 }
 
   bijVerandering(): void{
