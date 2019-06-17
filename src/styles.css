@@ -5,14 +5,20 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+adjust-user,
+show-user,
+newsfeed,
+create-post,
+adjust-post,
+create-group,
+create-reactie,
+show-comment{
+    margin: 0 !important;
+}
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0 !important; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+create-post{
+    margin-left: 20px !important;
+}
