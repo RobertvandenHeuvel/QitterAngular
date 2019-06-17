@@ -6,13 +6,11 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CreateUserComponent } from './create-user/create-user.component';
-
 import { FormsModule } from '@angular/forms';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AdjustUserComponent } from './adjust-user/adjust-user.component';
 import { ShowUserComponent } from './show-user/show-user.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { NewsfeedComponent } from './newsfeed/newsfeed.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { AdjustPostComponent } from './adjust-post/adjust-post.component';
@@ -31,7 +29,6 @@ import { LayoutModule } from '@angular/cdk/layout';
     PageNotFoundComponent,
     AdjustUserComponent,
     ShowUserComponent,
-    NavbarComponent,
     NewsfeedComponent,
     CreatePostComponent,
     AdjustPostComponent,
