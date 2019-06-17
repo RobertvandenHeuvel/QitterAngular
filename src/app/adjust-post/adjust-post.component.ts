@@ -26,7 +26,7 @@ export class AdjustPostComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    // const id = +this.route.snapshot.params["id"];
+    const id = +this.route.snapshot.params["id"];
     this.postService.findById(id).subscribe(post => {
       this.post=post;
       console.log(this.post);
