@@ -3,7 +3,6 @@
     <div *ngIf="!isChanging">
         <p class="post-inhoud" [id]="post.id">{{post.tekst}}</p>
         <button (click)="bijVerandering()">Wijzigen</button>
-        <button (click)="bijComment()">Comment</button>
     </div>
     <div  *ngIf="isChanging">
         <textarea *ngIf="isChanging" [(ngModel)]="post.tekst"></textarea> 
@@ -11,10 +10,6 @@
         <button (click)="bijVerandering()">Terug</button>
     </div>
 
-    <button (click)="delete(post.id)">Delete</button>
 
-    <div *ngIf="commentBoolean">
-        <textarea [(ngModel)]="reactie.tekst" placeholder="typ hier je comment"></textarea>
-        <button (click)="createReactie()">Opslaan</button>
-        <button (click)="bijComment()">Terug</button>
-    </div>
+    <button (click)="delete(post.id)">Delete</button>
+    <create-reactie></create-reactie>

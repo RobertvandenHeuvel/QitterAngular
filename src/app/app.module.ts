@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule} from '@angular/material';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { CreateReactieComponent } from './create-reactie/create-reactie.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     AdjustPostComponent,
     CreateGroupComponent,
     MainNavComponent,
+    CreateReactieComponent,
   ],
   imports: [
     BrowserModule,
