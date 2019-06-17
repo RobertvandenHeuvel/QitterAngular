@@ -1,0 +1,6 @@
+<button (click)="bijComment()">Comment</button>
+<div *ngIf="commentBoolean">
+  <textarea [(ngModel)]="reactie.tekst" placeholder="typ hier je comment"></textarea>
+  <button (click)="createReactie()">Opslaan</button>
+  <button (click)="bijComment()">Terug</button>
+</div>
