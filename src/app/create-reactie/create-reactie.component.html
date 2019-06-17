@@ -1,10 +1,8 @@
 <div *ngIf="!commentBoolean">
     <button (click)="bijComment()">Comment</button>
-    <show-comment [post]="post"></show-comment>
   </div>
 <div *ngIf="commentBoolean">
   <textarea [(ngModel)]="reactie.tekst" placeholder="typ hier je comment"></textarea>
   <button (click)="createReactie()">Opslaan</button>
-  <button (click)="bijComment()">Terug</button>
-  <show-comment [post]="post"></show-comment>
+  <button (click)="bijComment()">Terug</button>  
 </div>
