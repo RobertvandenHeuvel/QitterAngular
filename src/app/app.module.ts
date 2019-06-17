@@ -20,6 +20,7 @@ import { MatButtonModule, MatToolbarModule, MatSidenavModule, MatIconModule, Mat
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { CreateReactieComponent } from './create-reactie/create-reactie.component';
+import { ShowCommentComponent } from './show-comment/show-comment.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { CreateReactieComponent } from './create-reactie/create-reactie.componen
     CreateGroupComponent,
     MainNavComponent,
     CreateReactieComponent,
+    ShowCommentComponent,
   ],
   imports: [
     BrowserModule,

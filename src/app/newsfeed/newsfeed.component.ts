@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Post } from '../post';
 import { PostService } from '../post.service';
 
@@ -24,7 +24,6 @@ export class NewsfeedComponent implements OnInit {
         this.posts = data;
        
   })
-  console.log("joe anja");
 }
 
   bijVerandering(): void{
