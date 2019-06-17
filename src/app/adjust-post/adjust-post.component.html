@@ -4,10 +4,13 @@
         <p class="post-inhoud" [id]="post.id">{{post.tekst}}</p>
         <button (click)="bijVerandering()">Wijzigen</button>
         <button (click)="delete(post.id)">Delete</button>
-        <create-reactie></create-reactie>
+        <create-reactie [post]="post"></create-reactie>
     </div>
     <div  *ngIf="isChanging">
         <textarea *ngIf="isChanging" [(ngModel)]="post.tekst"></textarea> 
         <button (click)="getUser()">Opslaan</button>
         <button (click)="bijVerandering()">Terug</button>
     </div>
+
+
+    
