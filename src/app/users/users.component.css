@@ -5,56 +5,37 @@ ul{
 
 li{
     margin: 5px 0px;
+    border-bottom: 2px solid #800080;
+    padding-bottom: 5px;
 }
 
 body{
-    background: url(https://www.telegraph.co.uk/content/dam/news/2019/04/23/TELEMMGLPICT000194957190_trans_NvBQzQNjv4BqpVlberWd9EgFPZtcLiMQfyf2A9a6I9YchsjMeADBa08.jpeg?imwidth=1000);
-    background-color: #9C4AF0;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    height: 90vh;
+    background-color: rgb(226, 226, 226);
+    display: flex;
+    justify-content: center;
 }
 
 .heleLijst{
-    background-color: #de4bf2;
-    width: 45vh;
-    color: white;
+    background-color: white;
+    width: 100%;
+    color: black;
+    border-radius: 3px;
     
 }
 
-button {
-    background-color: #640080;/* Green */
-    border: none;
-    color: white;
-    padding: 6px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    margin: 2px 1px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-  }
-
-  button:hover{
-    background-color: #b538c5;
-  }
-
 a {
-    color: #f2f2f2;
+    color: #a169e0;
     text-decoration: none;
     text-align: center;
     font-size: 17px;
   }
 
 a:hover{
-   transition-duration: 0.4s;
-    background-color: #9C4AF0;
+    text-decoration: underline;
 }
 
 h1{
-    color: #ffffff;
+    color: #be6ee4;
 }
 
 @media screen and (max-width: 600px){
