@@ -30,8 +30,8 @@ export class CreatePostComponent implements OnInit {
     this.post.postSoort = 0;
     this.posts.push(this.post);
     this.putUser(this.posts);
-       this.ngOnInit();      
-    };
+    this.ngOnInit();      
+    }
   
   getUser(): void{
       this.userService.findById(1).subscribe(user => {
