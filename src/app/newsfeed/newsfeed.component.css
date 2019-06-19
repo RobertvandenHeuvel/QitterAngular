@@ -35,7 +35,7 @@ h1 {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 0 10px rgba(223, 97, 223, 0.13);
+    box-shadow: z;
     list-style: none;
 }
 
