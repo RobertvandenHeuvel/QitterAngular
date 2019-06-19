@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Reactie } from '../reactie';
-import { ReactieService } from '../reactie.service';
 import { NewsfeedComponent } from '../newsfeed/newsfeed.component';
 import { UserService } from '../user.service';
 import { User } from '../user';
@@ -14,10 +13,10 @@ import { PostService } from '../post.service';
 })
 export class CreateReactieComponent implements OnInit {
   private reactie: Reactie;
-  private user: User;
   private commentBoolean: Boolean = false;
   @Input()private post: Post;
   private reacties: Reactie[];
+  private user: User;
 
   constructor(
     private postService: PostService,
@@ -29,6 +28,7 @@ export class CreateReactieComponent implements OnInit {
     this.reactie = new Reactie();
     this.getUser();
     this.reacties = new Array;
+    
   }
 
   createReactie(): void {

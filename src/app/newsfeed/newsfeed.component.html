@@ -1,16 +1,15 @@
 <body>
 
-<h1>Welcome to Newsfeed Henk</h1>
+<h1>Welcome to Newsfeed</h1>
+  <div class="createPost">
+      <create-post></create-post>
+  </div>
 
-  <create-post></create-post>
 
-
-<div class="container">
   <ul class="feed">
     <li class="post-complete" *ngFor="let post of posts">
         <adjust-post [post]="post"></adjust-post>
     </li>
   </ul>
-</div>
 
 </body>
