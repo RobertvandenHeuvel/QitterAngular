@@ -13,4 +13,5 @@ textarea{
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
+    margin-top: 50px;
 }
