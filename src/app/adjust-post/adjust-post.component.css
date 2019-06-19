@@ -1,0 +1,9 @@
+.post-background{
+    background-color: darkblue;
+}
+
+.comment{
+    margin: 10px !important;
+    background-color: whitesmoke;
+    color: #333;
+}

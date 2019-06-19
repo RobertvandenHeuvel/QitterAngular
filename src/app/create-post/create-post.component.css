@@ -1,0 +1,16 @@
+textarea{
+    display: block;
+    border-radius: 3px;
+    resize: none;
+    min-width: 550px;
+    min-height: 100px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.createPost{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+}
