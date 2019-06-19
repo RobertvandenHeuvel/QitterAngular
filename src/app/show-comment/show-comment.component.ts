@@ -16,7 +16,7 @@ export class ShowCommentComponent implements OnInit {
   ngOnInit() {
         this.reacties = this.post.reacties;
         this.reacties.sort((a , b) =>{
-          return new Date(b.aanmaakDatum).getTime() - new Date(a.aanmaakDatum).getTime();
+          return new Date(a.aanmaakDatum).getTime() - new Date(b.aanmaakDatum).getTime();
         })
        console.log(this.reacties);
   }
