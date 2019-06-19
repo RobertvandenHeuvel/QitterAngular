@@ -17,11 +17,13 @@ show-comment{
 }
 
 html, body { height: 100%; }
-body { margin: 0 !important; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0 !important; font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-image: url("src/app/cat.jpg");
+}
 
 button{
-    height: 40px;
-    width: 80px;
+    min-height: 40px;
+    min-width: 80px;
     border-radius: 3px;
     margin-top: 10px;
     background-color: purple;
@@ -29,6 +31,7 @@ button{
     border-color: rgb(82, 5, 82);
     border-style: solid;
     transition-duration: 0.4s;
+    margin: 10px;
 }
 button:hover{
     background-color: rgb(170, 92, 194);
