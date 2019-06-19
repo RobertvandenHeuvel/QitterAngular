@@ -1,16 +1,17 @@
 <body>
 
-<h1>Welcome to Newsfeed Henk</h1>
+<head>
+    <h1>Welcome to Newsfeed Henk</h1>
+  </head>
 
+<div class="createpost">
   <create-post></create-post>
+</div>
 
-
-<div class="container">
-  <ul class="feed">
+  <ul class="feed" *ngIf="this.posts.length">
     <li class="post-complete" *ngFor="let post of posts">
         <adjust-post [post]="post"></adjust-post>
     </li>
   </ul>
-</div>
 
 </body>

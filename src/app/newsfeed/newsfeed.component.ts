@@ -11,7 +11,6 @@ export class NewsfeedComponent implements OnInit {
   posts: Post[];
   isCollapsed: Boolean = true;
 
-
   constructor(private postService: PostService) {
    }
 
@@ -22,10 +21,8 @@ export class NewsfeedComponent implements OnInit {
           return new Date(b.aanmaakDatum).getTime() - new Date(a.aanmaakDatum).getTime();
         })
         this.posts = data;
-       
   })
 }
-
   bijVerandering(): void{
     this.isCollapsed = !this.isCollapsed;
   }

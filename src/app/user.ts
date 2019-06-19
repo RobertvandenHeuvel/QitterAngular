@@ -1,4 +1,5 @@
 import { Groep } from './groep';
+import { Post } from './post';
 
 export class User {
     id: Number;
@@ -9,6 +10,6 @@ export class User {
     achternaam: String;
     email: String;
     rol: any;
-    posts: any[];
-    groep: Groep[] = [];
+    posts: Post[];
+    groep: Groep[];
 }

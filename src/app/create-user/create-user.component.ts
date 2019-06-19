@@ -16,21 +16,28 @@ export class CreateUserComponent implements OnInit {
 
   ngOnInit() {
     this.user = new User();
+    this.user.groep = new Array;
     this.groep = new Groep();
   }
 
   create(): void {
+    this.groep.groepsNaam = "testgroep";
     console.log(this.groep);
     console.log(this.user.groep);
     this.user.groep.push(this.groep);
+    console.log(this.user.groep);
     this.createUser(this.user);
     
   }
   createUser(gebruiker):void{
     this.userService.create(gebruiker).subscribe(() => {
-      this.user = new User();
       console.log(this.user.groep);
+      
+      
     });
+    this.user = new User();
+    this.user.groep = new Array;
+    this.groep = new Groep();
   }
 
 }

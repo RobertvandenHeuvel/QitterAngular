@@ -47,7 +47,6 @@ export class CreateReactieComponent implements OnInit {
   }
 
   putPostReactie(reacties: Reactie[]):void{
-    console.log("hoi");
     this.post.reacties = reacties;
     console.log(this.post.reacties);
     console.log(this.post);
