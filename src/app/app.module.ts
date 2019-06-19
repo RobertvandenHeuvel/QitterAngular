@@ -21,6 +21,7 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { CreateReactieComponent } from './create-reactie/create-reactie.component';
 import { ShowCommentComponent } from './show-comment/show-comment.component';
+import { GroepenComponent } from './groepen/groepen.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ShowCommentComponent } from './show-comment/show-comment.component';
     MainNavComponent,
     CreateReactieComponent,
     ShowCommentComponent,
+    GroepenComponent,
   ],
   imports: [
     BrowserModule,

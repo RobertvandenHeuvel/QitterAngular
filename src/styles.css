@@ -19,6 +19,18 @@ show-comment{
 html, body { height: 100%; }
 body { margin: 0 !important; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-create-post{
-    margin-left: 20px !important;
+button{
+    height: 40px;
+    width: 80px;
+    border-radius: 3px;
+    margin-top: 10px;
+    background-color: purple;
+    color: white;
+    border-color: rgb(82, 5, 82);
+    border-style: solid;
+    transition-duration: 0.4s;
+}
+button:hover{
+    background-color: rgb(170, 92, 194);
+    cursor: pointer;
 }
