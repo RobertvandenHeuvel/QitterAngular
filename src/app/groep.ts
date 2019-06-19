@@ -1,7 +1,7 @@
 import { User } from './user';
 
-export class Group {
+export class Groep {
     id: Number;
     groepsNaam: String;
-    gebruikers: User[] = [];
+    gebruikers: User[];
 }

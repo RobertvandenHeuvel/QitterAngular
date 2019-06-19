@@ -1,7 +1,7 @@
-import { Group } from './group';
+import { Groep } from './groep';
 
-describe('Group', () => {
+describe('Groep', () => {
   it('should create an instance', () => {
-    expect(new Group()).toBeTruthy();
+    expect(new Groep()).toBeTruthy();
   });
 });

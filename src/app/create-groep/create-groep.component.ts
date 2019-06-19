@@ -1,23 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { Group } from '../group';
-import { GroupService } from '../group.service';
+import { Groep } from '../groep';
 import { User } from '../user';
 import { UserService } from '../user.service';
+import { GroepService } from '../groep.service';
 
 @Component({
-  selector: 'create-group',
-  templateUrl: './create-group.component.html',
-  styleUrls: ['./create-group.component.css']
+  selector: 'create-groep',
+  templateUrl: './create-groep.component.html',
+  styleUrls: ['./create-groep.component.css']
 })
-export class CreateGroupComponent implements OnInit {
-  private group:Group;
+export class CreateGroepComponent implements OnInit {
+  private groep:Groep;
   private users:User[];
   private gebruiker:User;
   private gebruikersList:User[] = [];
-  constructor(private groupService: GroupService, private userService: UserService) { }
+  constructor(private groepService: GroepService, private userService: UserService) { }
 
   ngOnInit() {
-    this.group = new Group();
+    this.groep = new Groep();
     this.getUsers();
   }
 
@@ -39,12 +39,12 @@ export class CreateGroupComponent implements OnInit {
     console.log("voor " + this.gebruikersList);
     this.gebruikersList.push(this.gebruiker);
     console.log(this.gebruikersList);
-    this.groupService.create(this.group).subscribe(group => {
-      console.log(this.group);
+    this.groepService.create(this.groep).subscribe(groep => {
+      console.log(this.groep);
       for(let i=0;i<this.gebruikersList.length;i++){
-      this.group.gebruikers.push(this.gebruikersList[i]);
+      this.groep.gebruikers.push(this.gebruikersList[i]);
       }
-      console.log(this.group);
+      console.log(this.groep);
       this.ngOnInit();    
     });
   }

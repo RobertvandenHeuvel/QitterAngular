@@ -14,7 +14,7 @@ import { ShowUserComponent } from './show-user/show-user.component';
 import { NewsfeedComponent } from './newsfeed/newsfeed.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { AdjustPostComponent } from './adjust-post/adjust-post.component';
-import { CreateGroupComponent } from './create-group/create-group.component';
+import { CreateGroepComponent } from './create-groep/create-groep.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule} from '@angular/material';
 import { MainNavComponent } from './main-nav/main-nav.component';
@@ -34,7 +34,7 @@ import { ShowCommentComponent } from './show-comment/show-comment.component';
     NewsfeedComponent,
     CreatePostComponent,
     AdjustPostComponent,
-    CreateGroupComponent,
+    CreateGroepComponent,
     MainNavComponent,
     CreateReactieComponent,
     ShowCommentComponent,

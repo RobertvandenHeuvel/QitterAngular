@@ -1,3 +1,5 @@
+import { Groep } from './groep';
+
 export class User {
     id: Number;
     username: String;
@@ -8,4 +10,5 @@ export class User {
     email: String;
     rol: any;
     posts: any[];
+    groep: Groep[] = [];
 }
