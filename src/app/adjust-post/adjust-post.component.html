@@ -1,11 +1,9 @@
 <div class="post-background">
-<p class="post-details">{{post.gebruiker.username}} schrijft
-    op {{post.aanmaakDatum}}: </p> 
+<p class="post-details">{{post.gebruiker.username}}, {{post.aanmaakDatum | date:'medium'}}: </p> 
     <div *ngIf="!isChanging">
         <p class="post-inhoud" [id]="post.id">{{post.tekst}}</p>
         <button (click)="bijVerandering()">Wijzigen</button>
         <button (click)="delete(post.id)">Delete</button>
-        <create-reactie [post]="post"></create-reactie>
     </div>
     <div  *ngIf="isChanging">
         <textarea [(ngModel)]="post.tekst"></textarea> 
@@ -15,5 +13,6 @@
     <div class="comment">
     <show-comment [post]="post"></show-comment>
 </div>
+<create-reactie [post]="post"></create-reactie>
 </div>
     
