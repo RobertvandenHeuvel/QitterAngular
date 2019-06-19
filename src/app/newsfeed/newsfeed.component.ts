@@ -30,4 +30,5 @@ export class NewsfeedComponent implements OnInit {
     this.isCollapsed = !this.isCollapsed;
   }
 
+
 }

@@ -35,7 +35,7 @@ option:disabled{
     padding: 2px;
 }
 
-button{
+/* button{
     margin: 0 auto;
     border-radius: 3px;
     background-color: #555555;
@@ -46,7 +46,7 @@ button{
     text-align: center;
     text-decoration: none;
     display: inline-block;
-}
+} */
 
 h2{
     text-align: center;

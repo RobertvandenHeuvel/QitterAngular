@@ -6,7 +6,7 @@
   </div>
 
 
-  <ul class="feed">
+  <ul class="feed" *ngIf="this.posts.length">
     <li class="post-complete" *ngFor="let post of posts">
         <adjust-post [post]="post"></adjust-post>
     </li>
