@@ -26,6 +26,8 @@ button{
     min-width: 80px;
     border-radius: 3px;
     margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
     background-color: purple;
     color: white;
     border-color: rgb(82, 5, 82);
