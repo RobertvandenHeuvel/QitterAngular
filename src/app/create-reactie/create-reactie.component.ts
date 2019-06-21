@@ -5,6 +5,7 @@ import { UserService } from '../user.service';
 import { User } from '../user';
 import { Post } from '../post';
 import { PostService } from '../post.service';
+import { AuthenticationService } from '../_services';
 
 @Component({
   selector: 'create-reactie',
@@ -21,6 +22,7 @@ export class CreateReactieComponent implements OnInit {
   constructor(
     private postService: PostService,
     private userService: UserService,
+    private authenticationService: AuthenticationService,
     private newsfeedComponent: NewsfeedComponent
   ) { }
 
@@ -61,8 +63,6 @@ export class CreateReactieComponent implements OnInit {
   }
 
   getUser(): void{
-    this.userService.findById(2).subscribe(user => {
-      this.user=user;
-    });
+    this.user = this.authenticationService.currentUserValue;
   }
 }
