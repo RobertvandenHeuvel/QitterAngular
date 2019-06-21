@@ -7,9 +7,11 @@ import { AdjustUserComponent } from './adjust-user/adjust-user.component';
 import { UsersComponent } from './users/users.component';
 import { ShowUserComponent } from './show-user/show-user.component';
 import { NewsfeedComponent } from './newsfeed/newsfeed.component';
-import { AdjustPostComponent } from './adjust-post/adjust-post.component';
 import { CreateGroupComponent } from './create-group/create-group.component';
 import { GroepenComponent } from './groepen/groepen.component';
+import { AuthGuard } from './_helpers';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -23,7 +25,9 @@ const routes: Routes = [
   {path: 'newsfeed', component: NewsfeedComponent},
   {path: 'create-group', component: CreateGroupComponent},
   {path: 'groepen', component: GroepenComponent},
-  {path: '', redirectTo: 'login-page', pathMatch: 'full'},
+  {path: '', component: NewsfeedComponent, canActivate: [AuthGuard]},
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
   {path: '**', component: PageNotFoundComponent}
 ];
 
