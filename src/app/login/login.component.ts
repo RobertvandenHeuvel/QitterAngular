@@ -5,8 +5,12 @@ import { first } from 'rxjs/operators';
 
 import { AuthenticationService } from '../_services'
 import { AppComponent } from '../app.component';
+import { MainNavComponent } from '../main-nav/main-nav.component';
 
-@Component({templateUrl: 'login.component.html'})
+@Component({
+    selector: 'login',
+    templateUrl: 'login.component.html'
+})
 export class LoginComponent implements OnInit {
     loginForm: FormGroup;
     loading = false;
@@ -19,7 +23,8 @@ export class LoginComponent implements OnInit {
         private route: ActivatedRoute,
         private router: Router,
         private appComponent: AppComponent,
-        private authenticationService: AuthenticationService
+        private authenticationService: AuthenticationService,
+        private mainNavComponent: MainNavComponent
     ) {
         // redirect to home if already logged in
         if (this.authenticationService.currentUserValue) { 
@@ -32,6 +37,8 @@ export class LoginComponent implements OnInit {
             username: ['', Validators.required],
             password: ['', Validators.required]
         });
+
+        this.mainNavComponent.ngOnInit();
 
         // get return url from route parameters or default to '/'
         this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
@@ -54,6 +61,7 @@ export class LoginComponent implements OnInit {
             .subscribe(
                 data => {
                     this.router.navigate([this.returnUrl]);
+                    this.mainNavComponent.ngOnInit();
                 },
                 error => {
                     this.error = error;

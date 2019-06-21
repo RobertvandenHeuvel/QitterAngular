@@ -23,7 +23,7 @@ const routes: Routes = [
   {path: 'newsfeed', component: NewsfeedComponent},
   {path: 'create-group', component: CreateGroupComponent},
   {path: 'groepen', component: GroepenComponent},
-  {path: '', component: NewsfeedComponent, canActivate: [AuthGuard]},
+  {path: '', redirectTo: 'newsfeed', pathMatch: 'full', canActivate: [AuthGuard]},
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   {path: '**', component: PageNotFoundComponent}

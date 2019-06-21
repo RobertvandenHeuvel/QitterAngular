@@ -10,7 +10,7 @@ import { AuthenticationService } from './_services';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'QitterAngular';
+  title = 'Qitter';
   currentUser: any;
   constructor(
       private router: Router,
