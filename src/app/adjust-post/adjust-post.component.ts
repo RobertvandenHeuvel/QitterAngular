@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { NewsfeedComponent } from '../newsfeed/newsfeed.component';
 import { User } from '../user';
 import { UserService } from '../user.service';
+import { AuthenticationService } from '../_services';
 
 @Component({
   selector: 'adjust-post',
@@ -22,6 +23,7 @@ export class AdjustPostComponent implements OnInit {
     private postService: PostService,
     private route: ActivatedRoute,
     private newsfeedComponent: NewsfeedComponent,
+    private authenticationService:AuthenticationService,
     private userService: UserService
     ) { }
 
@@ -45,10 +47,9 @@ export class AdjustPostComponent implements OnInit {
 
   getUser(): void{
     this.user = new User();
-    this.userService.findById(1).subscribe(user => {
-      this.user=user;
-      this.create();
-    });
+    this.user = this.authenticationService.currentUserValue;
+    this.create();
+
   }
   create(): void {
     this.posts.push(this.post);
