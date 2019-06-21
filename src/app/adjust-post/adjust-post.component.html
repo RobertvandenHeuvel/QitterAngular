@@ -5,8 +5,8 @@
         <button (click)="bijVerandering()">Wijzigen</button>
         <button (click)="delete(post.id)">Delete</button>
     </div>
-    <div  *ngIf="isChanging">
-        <textarea [(ngModel)]="post.tekst"></textarea> 
+    <div class="Wijzigen-box" *ngIf="isChanging">
+        <textarea  [(ngModel)]="post.tekst"></textarea> 
         <button (click)="getUser()">Opslaan</button>
         <button (click)="bijVerandering()">Terug</button>
     </div>
