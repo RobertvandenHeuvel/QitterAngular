@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Post } from '../post';
 import { PostService } from '../post.service';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'newsfeed',
@@ -10,9 +11,13 @@ import { PostService } from '../post.service';
 export class NewsfeedComponent implements OnInit {
   posts: Post[];
   isCollapsed: Boolean = true;
+  private currentUser: any;
 
 
-  constructor(private postService: PostService) {
+  constructor(
+    private postService: PostService,
+    private appComponent: AppComponent
+    ) {
    }
 
   ngOnInit() {
@@ -24,6 +29,7 @@ export class NewsfeedComponent implements OnInit {
         this.posts = data;
        
   })
+  this.currentUser = this.appComponent.currentUser;
 }
 
   bijVerandering(): void{

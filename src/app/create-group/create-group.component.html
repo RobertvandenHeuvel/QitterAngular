@@ -1,4 +1,4 @@
-<div class="creategroup_container">
+<div *ngIf="currentUser" class="creategroup_container">
 
   <div class="creategroupchild"> 
     <h2>Create Group</h2>         
@@ -9,4 +9,8 @@
     </select> 
     <button (click)="create(user)" >Create Group</button>
   </div>
-  </div>  
+</div> 
+
+<div *ngIf="!currentUser">
+    <p>Fout: je bent niet ingelogd.</p>
+  </div>

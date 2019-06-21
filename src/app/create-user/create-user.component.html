@@ -1,8 +1,7 @@
 
 <body>
-<h2>Create User</h2>
   
-<div class="wrapper">
+<div *ngIf="currentUser" class="wrapper">
   <div class ="create-form">
     <div class="input-fields">
         
@@ -27,5 +26,9 @@
 
   </div>
 
+</div>
+
+<div *ngIf="!currentUser">
+    <p>Fout: je bent niet ingelogd.</p>
 </div>
 </body>
