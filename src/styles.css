@@ -38,3 +38,7 @@ button:hover{
     background-color: rgb(170, 92, 194);
     cursor: pointer;
 }
+
+div{
+    text-align: center;
+}

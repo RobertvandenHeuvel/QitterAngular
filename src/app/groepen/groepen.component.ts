@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GroupService } from '../group.service';
 import { Group } from '../group';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'groepen',
@@ -9,9 +10,11 @@ import { Group } from '../group';
 })
 export class GroepenComponent implements OnInit {
   private groepen: Group[];
+  private currentUser: any;
 
   constructor(
-    private groupService: GroupService
+    private groupService: GroupService,
+    private appComponent: AppComponent
   ) { }
 
   ngOnInit() {
@@ -19,6 +22,7 @@ export class GroepenComponent implements OnInit {
         this.groepen = data;
       });
       console.log(this.groepen);
+      this.currentUser = this.appComponent.currentUser;
   }
 
   delete(id: Number): void{

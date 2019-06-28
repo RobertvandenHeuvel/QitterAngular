@@ -3,6 +3,7 @@ import { Group } from '../group';
 import { GroupService } from '../group.service';
 import { User } from '../user';
 import { UserService } from '../user.service';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'create-group',
@@ -14,11 +15,17 @@ export class CreateGroupComponent implements OnInit {
   private users:User[];
   private gebruiker:User;
   private gebruikersList:User[] = [];
-  constructor(private groupService: GroupService, private userService: UserService) { }
+  private currentUser: any;
+  constructor(
+    private groupService: GroupService,
+    private userService: UserService,
+    private appComponent: AppComponent
+    ) { }
 
   ngOnInit() {
     this.group = new Group();
     this.getUsers();
+    this.currentUser = this.appComponent.currentUser;
   }
 
   getUsers(): void{

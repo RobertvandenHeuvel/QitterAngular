@@ -1,5 +1,5 @@
 <body>
-<div>
+<div *ngIf="currentUser">
   <h1>User list</h1>
   <ul class="heleLijst">
     <li *ngFor="let user of users">
@@ -9,5 +9,10 @@
       <button (click)="delete(user.id)">Delete</button>
     </li>
   </ul>
+</div>
+
+<div *ngIf="!currentUser">
+    <p>Fout: je bent niet ingelogd.</p>
+    <a routerLink="/login">naar login pagina</a>
 </div>
 </body>

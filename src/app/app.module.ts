@@ -4,10 +4,10 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { FormsModule } from '@angular/forms';
-import { LoginPageComponent } from './login-page/login-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AdjustUserComponent } from './adjust-user/adjust-user.component';
 import { ShowUserComponent } from './show-user/show-user.component';
@@ -22,13 +22,15 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { CreateReactieComponent } from './create-reactie/create-reactie.component';
 import { ShowCommentComponent } from './show-comment/show-comment.component';
 import { GroepenComponent } from './groepen/groepen.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     CreateUserComponent,
-    LoginPageComponent,
     PageNotFoundComponent,
     AdjustUserComponent,
     ShowUserComponent,
@@ -40,10 +42,13 @@ import { GroepenComponent } from './groepen/groepen.component';
     CreateReactieComponent,
     ShowCommentComponent,
     GroepenComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
@@ -54,7 +59,10 @@ import { GroepenComponent } from './groepen/groepen.component';
     MatIconModule,
     MatListModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
