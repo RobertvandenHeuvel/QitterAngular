@@ -3,6 +3,7 @@ import { Post } from '../post';
 import { User } from '../user';
 import { UserService } from '../user.service';
 import { NewsfeedComponent } from '../newsfeed/newsfeed.component';
+import { AuthenticationService } from '../_services';
 
 @Component({
   selector: 'create-post',
@@ -16,6 +17,7 @@ export class CreatePostComponent implements OnInit {
 
   constructor(
     private userService: UserService,
+    private authenticationService: AuthenticationService,
     private newsfeedComponent: NewsfeedComponent
     ) { }
 
@@ -34,9 +36,7 @@ export class CreatePostComponent implements OnInit {
     }
   
   getUser(): void{
-      this.userService.findById(1).subscribe(user => {
-        this.user=user;
-      });
+      this.user = this.authenticationService.currentUserValue;
     }
     
     putUser(posts: Post[]):void{

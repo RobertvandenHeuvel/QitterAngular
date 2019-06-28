@@ -1,5 +1,5 @@
 <body>
-
+<div *ngIf="currentUser">
 <h1>Welcome to Newsfeed</h1>
   <div class="createPost">
       <create-post></create-post>
@@ -11,5 +11,9 @@
         <adjust-post [post]="post"></adjust-post>
     </li>
   </ul>
-
+</div>
+<div *ngIf="!currentUser">
+<p>Fout: je bent niet ingelogd.</p>
+<a routerLink="/login">naar login pagina</a>
+</div>
 </body>

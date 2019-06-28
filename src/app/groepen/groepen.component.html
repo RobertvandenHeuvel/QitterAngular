@@ -1,5 +1,5 @@
 <body>
-    <div>
+    <div *ngIf="currentUser">
       <h1>Group list</h1>
       <ul class="heleLijst">
         <li *ngFor="let groep of groepen">
@@ -10,4 +10,9 @@
         </li>
       </ul>
     </div>
+
+<div *ngIf="!currentUser">
+  <p>Fout: je bent niet ingelogd.</p>
+  <a routerLink="/login">naar login pagina</a>
+</div>
 </body>

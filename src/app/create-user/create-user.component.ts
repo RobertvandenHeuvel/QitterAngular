@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { UserService } from '../user.service';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'create-user',
@@ -9,11 +10,16 @@ import { UserService } from '../user.service';
 })
 export class CreateUserComponent implements OnInit {
   private user:User;
+  private currentUser: any;
 
-  constructor(private userService: UserService) { }
+  constructor(
+    private userService: UserService,
+    private appComponent: AppComponent
+    ) { }
 
   ngOnInit() {
     this.user = new User();
+    this.currentUser = this.appComponent.currentUser;
   }
 
   create(): void {

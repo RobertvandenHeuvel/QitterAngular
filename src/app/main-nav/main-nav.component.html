@@ -1,5 +1,5 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+  <mat-sidenav *ngIf="currentUser" #drawer class="sidenav" fixedInViewport="true"
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="!(isHandset$ | async)">
@@ -22,15 +22,14 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <div class="bovenkant"> 
-          <span class="spacer">Qitter</span>
-          <span class="spacer"></span>
+      <div class="bovenkant"  *ngIf="currentUser">
           <a class="togglebutton" mat-list-item routerLink="/newsfeed">Newsfeed</a>
           <a class="togglebutton" mat-list-item routerLink="/users">Gebruikers</a>
           <a class="togglebutton" mat-list-item routerLink="/create-user">Maak Gebruiker</a>
           <a class="togglebutton" mat-list-item routerLink="/groepen">Groepen</a>
           <a class="togglebutton" mat-list-item routerLink="/create-group">Maak Groep</a>
     </div>
+    <button *ngIf="currentUser" (click)="logout()">Logout</button>
     <img src="assets/image/qienlogo.png" height="42" width="32" hspace="10">
 
     </mat-toolbar>
