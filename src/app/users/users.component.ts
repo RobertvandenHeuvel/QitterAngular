@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { User } from '../user';
 import { AppComponent } from '../app.component';
+import { CheckCredentialsService } from '../check-credentials.service';
 
 @Component({
   selector: 'users',
