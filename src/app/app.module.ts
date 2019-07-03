@@ -25,6 +25,7 @@ import { GroepenComponent } from './groepen/groepen.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
+import { ShowGroupComponent } from './show-group/show-group.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { JwtInterceptor, ErrorInterceptor } from './_helpers';
     GroepenComponent,
     LoginComponent,
     RegisterComponent,
+    ShowGroupComponent,
   ],
   imports: [
     BrowserModule,

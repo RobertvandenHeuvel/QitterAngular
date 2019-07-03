@@ -1,5 +1,5 @@
 <div class="show-comment">
-  <p *ngFor="let reactie of reacties">
+  <p class="reactie" *ngFor="let reactie of reacties"> <!--Jordi toevoeging-->
     <sub>{{reactie.gebruiker.username}}, {{reactie.aanmaakDatum | date:'medium'}}</sub>
     <br/>
     {{reactie.tekst}}

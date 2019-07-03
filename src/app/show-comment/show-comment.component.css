@@ -5,4 +5,17 @@
     padding-bottom: 5px;
 
     border-radius: 3px;
+
+
+}
+
+.reactie{
+    /* margin-left: 50px; Jordi */
+    border-width: 1px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: gray;
+    padding: 15px;
+    font-size: 0.8em;/* Jordi */
+    color: rgb(73, 73, 73);
 }
