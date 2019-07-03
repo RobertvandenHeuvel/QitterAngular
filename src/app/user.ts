@@ -8,4 +8,5 @@ export class User {
     email: String;
     rol: any;
     posts: any[];
+    token: String;
 }
