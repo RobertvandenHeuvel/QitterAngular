@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { UserService } from '../user.service';
 import { AppComponent } from '../app.component';
+import { CheckCredentialsService } from '../check-credentials.service';
 
 @Component({
   selector: 'create-user',
@@ -14,11 +15,13 @@ export class CreateUserComponent implements OnInit {
 
   constructor(
     private userService: UserService,
-    private appComponent: AppComponent
+    private appComponent: AppComponent,
+    // private checkCredentialsService: CheckCredentialsService
     ) { }
 
   ngOnInit() {
     this.user = new User();
+    // this.checkCredentialsService.checkCredentials(this.appComponent.currentUser);
     this.currentUser = this.appComponent.currentUser;
   }
 
