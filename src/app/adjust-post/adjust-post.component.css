@@ -14,7 +14,11 @@
 }
 .post-details{
     padding: 10px;
-    
+    /* text-decoration: underline;   */
+    color: gray;
+    font-size: 14px;
+    /* background-color: rgb(192, 192, 192); */
+    text-align: right;
 }
 .post-inhoud{
     padding: 10px;

@@ -1,5 +1,5 @@
 <div class="post-background">
-<p class="post-details">{{post.gebruiker.username}}, {{post.aanmaakDatum | date:'medium'}}: </p> 
+<p class="post-details">{{post.gebruiker.username}} zegt op {{post.aanmaakDatum | date:'medium'}}:</p> 
     <div *ngIf="!isChanging">
         <p class="post-inhoud" [id]="post.id">{{post.tekst}}</p>
         <button (click)="bijVerandering()">Wijzigen</button>
