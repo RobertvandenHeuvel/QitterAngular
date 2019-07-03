@@ -45,14 +45,6 @@ h1 {
     
 }
 
-.post-details{ /* JOrdi: waarom doet de CSS het hier niet??? */
-    text-decoration: underline;
-    color: green;
-    font-size: 4.8 em;
-    background-color: pink;
-    text-align: right;
-    padding: 100 px;
-}
 
 .post-inhoud{
 font-style: oblique;

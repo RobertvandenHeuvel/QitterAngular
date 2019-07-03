@@ -42,16 +42,16 @@ export class CreateGroupComponent implements OnInit {
   }
 
   create(): void {
-    console.log(this.gebruiker);
-    console.log("voor " + this.gebruikersList);
-    this.gebruikersList.push(this.gebruiker);
-    console.log(this.gebruikersList);
+    // console.log(this.gebruiker);
+    // console.log("voor " + this.gebruikersList);
+    // this.gebruikersList.push(this.gebruiker);
+    // console.log(this.gebruikersList);
     this.groupService.create(this.group).subscribe(group => {
-      console.log(this.group);
+      // console.log(this.group);
       for(let i=0;i<this.gebruikersList.length;i++){
-      this.group.gebruikers.push(this.gebruikersList[i]);
+        this.group.gebruikers.push(this.gebruikersList[i]);
       }
-      console.log(this.group);
+      // console.log(this.group);
       this.ngOnInit();    
     });
   }

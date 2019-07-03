@@ -16,6 +16,23 @@
     border-style: solid;
     border-color: gray;
     padding: 15px;
+    margin: 20px;
     font-size: 0.8em;/* Jordi */
     color: rgb(73, 73, 73);
+    text-align: right;
+}
+
+.details{
+    padding: 10px;
+    /* text-decoration: underline; */
+    color: black;
+    font-size: 1 em;
+    /* background-color: rgb(192, 192, 192); */
+    text-align: right;
+    color: gray;
+}
+
+.inhoud{
+    text-align: center;
+    
 }
